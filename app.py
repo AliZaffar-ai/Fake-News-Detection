@@ -16,9 +16,9 @@ nltk.download('stopwords')
 app = Flask(__name__)
 
 # Load saved models
-rf_model = joblib.load('/Users/muhammadalizaffar/Developers_hub/Task 3/fake_news_rf.pkl')
-tokenizer = joblib.load('/Users/muhammadalizaffar/Developers_hub/Task 3/tokenizer.pkl')
-lstm_model = load_model('/Users/muhammadalizaffar/Developers_hub/Task 3/fake_news_lstm.h5')
+rf_model = joblib.load('/fake_news_rf.pkl')
+tokenizer = joblib.load('/tokenizer.pkl')
+lstm_model = load_model('/fake_news_lstm.h5')
 
 # Define a cleaning function (similar to training)
 stop_words = set(stopwords.words('english'))
